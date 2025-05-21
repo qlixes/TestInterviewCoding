@@ -34,6 +34,22 @@ func RotateNum(stack []int) string {
 	return strings.Join(result, "")
 }
 
+func StyleWord(word string, size int) [][]byte {
+
+	cols := make([]byte, len(word))
+	result := make([]cols, size)
+
+	x, y := 0, 0
+
+	for i, j := range word {
+		x += 1
+		y += 1
+	}
+
+	fmt.Println(result)
+}
+
 func main() {
 	fmt.Println(RotateNum([]int{3,4,6,7,1,5,6,7,8,9}))
+	StyleWord("wordpress", 5)
 }

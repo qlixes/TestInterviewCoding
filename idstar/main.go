@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func RotateNum(stack []int) string {
+func ArrayChallenge02(stack []int) string {
 
 	size := len(stack)
 	result := make([]string, size)
@@ -34,22 +34,38 @@ func RotateNum(stack []int) string {
 	return strings.Join(result, "")
 }
 
-func StyleWord(word string, size int) [][]byte {
+func SearchingChallange(str string) string {
+	// remove whitespace
+	clean := strings.ReplaceAll(str, " ", "")
 
-	cols := make([]byte, len(word))
-	result := make([]cols, size)
+	help := make(map[rune]int)
 
-	x, y := 0, 0
+	var sort []rune
+	var result []string
 
-	for i, j := range word {
-		x += 1
-		y += 1
+	for _, j := range clean {
+		help[j] += 1
+
+		if help[j] == 1 {
+			sort = append(sort, j)
+		}
 	}
 
-	fmt.Println(result)
+	for _, j := range sort {
+		if help[j] == 1 {
+			result = append(result, string(j))
+		}
+	}
+
+	return result[0]
+}
+
+func StringChallenge(word string, size int) string {
+
+	return ""
 }
 
 func main() {
-	fmt.Println(RotateNum([]int{3,4,6,7,1,5,6,7,8,9}))
-	StyleWord("wordpress", 5)
+	fmt.Println(ArrayChallenge02([]int{3, 4, 6, 7, 1, 5, 6, 7, 8, 9}))
+	fmt.Println(SearchingChallange("hello world hi hey"))
 }

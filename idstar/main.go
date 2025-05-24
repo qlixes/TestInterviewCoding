@@ -60,12 +60,35 @@ func SearchingChallange(str string) string {
 	return result[0]
 }
 
-func StringChallenge(word string, size int) string {
+func ArrayChallenge(str []string) string {
 
-	return ""
+	if len(str) > 2 {
+		return ""
+	}
+
+	list := strings.ReplaceAll(str[0], ",", "")
+	stack := strings.ReplaceAll(str[1], ",", "")
+
+	duplicate := make(map[string]int)
+	for i, j := range list {
+		if i < len(stack) && string(stack[i]) == string(j) {
+			duplicate[string(j)] += 1
+		}
+	}
+
+	result := ""
+	for i, j := range duplicate {
+		if j == 1 {
+			result += fmt.Sprint(i)
+		}
+		result += fmt.Sprint(",")
+	}
+
+	return result
 }
 
 func main() {
 	fmt.Println(ArrayChallenge02([]int{3, 4, 6, 7, 1, 5, 6, 7, 8, 9}))
 	fmt.Println(SearchingChallange("hello world hi hey"))
+	fmt.Println(ArrayChallenge([]string{"1,3,9,10,17,18", "1,4,9,10"}))
 }

@@ -31,7 +31,7 @@ func ArrayChallenge02(stack []int) string {
 		result[id] = strconv.Itoa(j)
 	}
 
-	return strings.Join(result, "")
+	return ""
 }
 
 func SearchingChallange(str string) string {
@@ -60,7 +60,7 @@ func SearchingChallange(str string) string {
 	return result[0]
 }
 
-func ArrayChallenge(str []string) string {
+func ArrayChallenge01(str []string) string {
 
 	if len(str) > 2 {
 		return ""
@@ -87,8 +87,30 @@ func ArrayChallenge(str []string) string {
 	return result
 }
 
+func MergeSortedArrayChallenge(nums1 []int, m int, nums2 []int, n int) []int {
+	var result []int
+
+	// get list items based on m item
+	slice1 := nums1[:m]
+	slice2 := nums2[:n]
+
+	// merge slice
+	slice := append(slice1, slice2...)
+
+	var helper []int
+
+	temp := 0
+	for i, j := range slice {
+	}
+
+	fmt.Println(helper)
+
+	return result
+}
+
 func main() {
-	fmt.Println(ArrayChallenge02([]int{3, 4, 6, 7, 1, 5, 6, 7, 8, 9}))
+	fmt.Println(ArrayChallenge02([]int{4, 3, 4, 3, 1, 2}))
 	fmt.Println(SearchingChallange("hello world hi hey"))
-	fmt.Println(ArrayChallenge([]string{"1,3,9,10,17,18", "1,4,9,10"}))
+	fmt.Println(ArrayChallenge01([]string{"1,3,9,10,17,18", "1,4,9,10"}))
+	fmt.Println(MergeSortedArrayChallenge([]int{1, 2, 3, 0, 0, 0}, 3, []int{2, 5, 6}, 3))
 }

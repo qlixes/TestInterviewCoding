@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 )
@@ -23,6 +22,15 @@ func LongestWord(sen string) string {
 	return result
 }
 
+func FirstFactorial(num int) int {
+	result := 1
+
+	for i := 1; i <= num; i++ {
+		result = result * i
+	}
+
+	return result
+}
+
 func main() {
-	fmt.Println(LongestWord("123456789 98765432"))
 }

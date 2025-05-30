@@ -32,5 +32,18 @@ func FirstFactorial(num int) int {
 	return result
 }
 
+func FirstReverse(str string) string {
+
+	var result string
+
+	size := len(str)
+
+	for i := 1; i <= size; i++ {
+		result = result + string(str[size-i])
+	}
+
+	return result
+}
+
 func main() {
 }

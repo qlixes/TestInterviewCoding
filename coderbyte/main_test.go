@@ -181,3 +181,84 @@ func TestFirstFactorial10(t *testing.T) {
 		t.Errorf("got %d want %d", got, want)
 	}
 }
+
+func TestFirstReserve01(t *testing.T) {
+	got := FirstReverse("I Love Coding")
+	want := "gnidoC evoL I"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve02(t *testing.T) {
+	got := FirstReverse("h333llLo")
+	want := "oLll333h"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve03(t *testing.T) {
+	got := FirstReverse("Yo0")
+	want := "0oY"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve04(t *testing.T) {
+	got := FirstReverse("thisiscool")
+	want := "loocsisiht"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve05(t *testing.T) {
+	got := FirstReverse("commacomma!")
+	want := "!ammocammoc"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve06(t *testing.T) {
+	got := FirstReverse("123456789")
+	want := "987654321"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve07(t *testing.T) {
+	got := FirstReverse("lettersz!23z")
+	want := "z32!zsrettel"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve08(t *testing.T) {
+	got := FirstReverse("aq")
+	want := "qa"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}
+
+func TestFirstReserve09(t *testing.T) {
+	got := FirstReverse("b")
+	want := "b"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
+}

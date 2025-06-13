@@ -11,11 +11,12 @@ type Product struct {
 }
 
 func GetPriceWithTax(product Product, taxRate float64) Product {
+
 	tax := float64((taxRate * product.Price) / 100)
 
-	return Product{
-		Price: tax + product.Price,
-	}
+	product.Price = tax
+	
+	return product
 }
 
 func CalculateAverage(num []int) (float64, error) {

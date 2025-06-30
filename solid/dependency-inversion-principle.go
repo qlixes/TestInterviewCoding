@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+/**
+# Dependency Inversion Principle (DIP)
+- High levels of modules should not be dependent on low levels of modules. Both should follow abstractions (e.g., interfaces).
+- One of the popular principles that has been widely used in object-oriented programming is the Dependency Inversion Principle which states that abstractions should not depend on details but rather details should depend on abstractions.
+- This principle is in charge of limiting the dependency between two distinct parties or instead between a superior and inferior module, by presenting an abstraction.
+- This increases modularity as the system achieves flexibility and can easily be modified to suit change.
+**/
+
 type MySQL struct {
 }
 

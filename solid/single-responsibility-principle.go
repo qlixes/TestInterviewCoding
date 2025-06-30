@@ -7,6 +7,14 @@ import (
 	"math"
 )
 
+/**
+# Single Responsibility Principle (SRP)
+- Every class should have only one reason to change, which means that a class should have only one responsibility or its functionality should be limited to just one task.
+- This makes the class easier to comprehend, evaluate, and build as compared to other programming structures that may be more complex to handle.
+- It minimizes the level of code which enhances clarity, and it enhances the maintainability of the source code.
+- This reduces the exposure of the system to bugs that cause changes because only fewer classes are affected.
+**/
+
 type circle struct {
 	radius float64
 }
@@ -45,7 +53,7 @@ func (o outputter) Text(s shape) string {
 
 func (o outputter) JSON(s shape) string {
 	res := struct {
-		Name string `json:"shape"`
+		Name string  `json:"shape"`
 		Area float64 `json:"area"`
 	}{
 		Name: s.name(),

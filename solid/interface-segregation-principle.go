@@ -5,6 +5,13 @@ import (
 	"math"
 )
 
+/**
+# Interface Segregation Principle (ISP)
+- If one can offer a mechanism where clients are not dependent on interfaces they do not utilize, it should be encouraged.
+- Somewhere these smaller specialized interfaces are preferred over having one larger general purpose interface.
+- This means that clients use only those methods they need, to help them achieve their goals. Flux also helps minimize the effects of changes and increase flexibility.
+**/
+
 type square struct {
 	length float64
 }

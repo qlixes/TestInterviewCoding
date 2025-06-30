@@ -5,6 +5,13 @@ import (
 	"math"
 )
 
+/**
+# Open-Closed Principle (OCP)
+- Organizations and systems should be designed to be easily extensible but on the other hand, the existing interfaces should not be alterable or modifiable easily.
+- One circuit that is unique with modules is that the action of a module can be further mannered without a direct signal to its source program.
+- This is mainly done through the process of abstraction and polymorphism. It promotes flexibility and eliminates the possibility of having bugs creeping in as developers add new features.
+**/
+
 type circle struct {
 	radius float64
 }
